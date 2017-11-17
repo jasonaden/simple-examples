@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { AnimalsModule } from './animals/animals.module';
+import { LifecycleHooksModule } from './lifecycle-hooks/lifecycle-hooks.module';
+import { FormValidationModule } from './form-validation/form-validation.module';
 
 
 @NgModule({
@@ -10,7 +14,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([]),
+    AnimalsModule.configure('http://dog.ceo', '/api'),
+    LifecycleHooksModule,
+    FormValidationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

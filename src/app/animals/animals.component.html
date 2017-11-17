@@ -1,0 +1,7 @@
+<img src="{{image}}" height="300">
+
+<ul>
+  <li *ngFor="let animal of animals">
+    <b (click)="getImage(animal)" style="cursor: pointer;">{{animal}}</b>
+  </li>
+</ul>

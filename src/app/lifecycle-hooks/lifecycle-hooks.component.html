@@ -1,0 +1,8 @@
+<h3>Lifecycle Hooks</h3>
+
+<button (click)="checkValues()">Check For Updates</button>
+<button (click)="clearLog()">Clear Logs</button>
+
+<ul>
+  <li *ngFor="let log of logs"><b>{{log.hook}}: </b>{{log.description}}</li>
+</ul>
